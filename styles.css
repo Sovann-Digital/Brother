@@ -1,55 +1,108 @@
-/* styles.css */
-
-body {
-  font-family: Arial, sans-serif;
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  user-select: none; /* Make the entire page unselectable */
 }
 
-header, footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
+.container {
+  height: 100%;
+  background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Adding blur effect to the background */
 }
 
-section {
-  padding: 20px;
-  margin-bottom: 20px;
+.card-container {
+  perspective: 1000px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
 }
 
-textarea {
-  width: 100%;
-  height: 100px;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
+.card:hover {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #555;
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("./Card.png");
+  background-position: 50% 10%;
+  background-size: cover; /* Make the image cover the entire card */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  backface-visibility: hidden;
+  border-radius: 2px;
 }
 
-#photo-container {
+.card-front {
+  background-color: #e0e0e066;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Make text flow from top to bottom */
   justify-content: center;
+  align-items: center;
 }
 
-#photo-container img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin: 5px;
+.card-back {
+  background-color: #e0e0e066;
+  display: flex;
+  flex-direction: column; /* Make text flow from top to bottom */
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+img {
+  width: 50px; /* Adjust the width of the image */
+}
+
+p {
+  font-size: 12px; /* Adjust the font size of the text */
+}
+
+.text {
+  width: 80%; /* Adjust the padding of the text container */
+}
+
+.bow {
+  width: 80px;
+  height: 80px;
+  background-image: url("./bow.png");
+  background-position: 50% 10%;
+  background-size: cover; /* Make the image cover the entire card */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  backface-visibility: hidden;
+  position: absolute;
+  top: -20px; /* Adjust as needed */
+  right: -20px; /* Adjust as needed */
+  z-index: 9999; /* Set a high z-index value to ensure it appears on top */
+}
+
+@keyframes waterDrop {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.water-drop {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #00ffff33; /* You can adjust the color as needed */
+  border-radius: 50%;
+  animation: waterDrop 0.5s ease-out; /* Adjust the animation duration and timing function */
 }

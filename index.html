@@ -3,69 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy 21st Birthday!</title>
+  <title>Happy Birthday Card for Brother</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Happy 21st Birthday, [Brother's Name]!</h1>
-    <p>Welcome to Your Special Celebration Website</p>
-  </header>
+  <div class="container">
+    <div class="card-container" onclick="flipCard()">
+      <div class="card">
+        <div class="bow">
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Dear [Brother's Name],</p>
-    <p>On this joyous occasion of your 21st birthday, we wanted to create something extraordinary to commemorate this milestone in your life. This website is dedicated to celebrating you and all the wonderful memories we've shared together.</p>
-  </section>
-
-  <section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div id="photo-container">
-      <!-- Insert your memorable photos here -->
+        </div>
+        <div class="card-front">
+          <h4>🎂Happy Birthday!</h4>
+          <!-- Add the birthday gift image -->
+          <img src="./gift.png" alt="Gift" class="gift-image">
+          <div class="text">
+              <p class="unselectable">Dear Brother<b> Borin</b></p>
+              <p class="unselectable">Wishing you a fantastic birthday filled with joy, laughter, and all the happiness in the world. You're not just a brother, but also a friend and confidant. Here's to many more amazing years ahead!</p>
+              <p class="unselectable">From me, Sovann</p>
+          </div>
+        </div>
+        <div class="card-back">
+            <div class="text">
+                <h2>Dear Brother,</h2>
+                <p class="unselectable">On this special day, I want to express my gratitude for having you in my life. You're not only my brother but also my inspiration and support. May your birthday be as wonderful as you are.</p>
+                <p class="unselectable">Happy Birthday!</p>
+                <p class="unselectable">Love, Sovann</p>
+            </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <section id="wishes">
-    <h2>Birthday Wishes</h2>
-    <div id="wishes-container">
-      <!-- Birthday wishes will be displayed here -->
-    </div>
-    <textarea id="wish-input" placeholder="Leave your birthday wish here"></textarea>
-    <button onclick="addWish()">Send</button>
-  </section>
-
-  <section id="fun-facts">
-    <h2>Fun Facts</h2>
-    <ul>
-      <li><strong>Favorite food:</strong> [Brother's favorite food]</li>
-      <li><strong>Dream travel destination:</strong> [Brother's dream destination]</li>
-      <li><strong>Favorite hobby:</strong> [Brother's favorite hobby]</li>
-    </ul>
-  </section>
-
-  <section id="virtual-party">
-    <h2>Virtual Party</h2>
-    <p>Join us for a virtual birthday party on [date & time]. Click <a href="#">here</a> to join the celebration!</p>
-  </section>
-
-  <section id="memories">
-    <h2>Memories</h2>
-    <ol>
-      <li>[Memorable Moment 1]</li>
-      <li>[Memorable Moment 2]</li>
-      <li>[Memorable Moment 3]</li>
-    </ol>
-  </section>
-
-  <section id="countdown">
-    <h2>Countdown</h2>
-    <p>Only [days left] until your big day! Let's make every moment count.</p>
-  </section>
-
-  <footer>
-    <p>Contact: [Your Name] - [Your Email]</p>
-  </footer>
-
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
+  <script>
+    </script>
+    
+    
 </body>
 </html>
